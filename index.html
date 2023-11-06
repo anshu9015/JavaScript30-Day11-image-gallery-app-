@@ -23,8 +23,27 @@
                 <span><img src="h-scroll-img/images/image-6.png"></span>
             </div>
         </div>
-        <img src="h-scroll-img/images/back.png" id="backBtn">
+        <img src="h-scroll-img/images/next.png" id="nextBtn">
     </div>
+
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+
+
+        nextBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehaviour = "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+        backBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehaviour = "smooth";
+            scrollContainer.scrollLeft -= 900;
+        });
+
+    </script>
+
 </body>
 
 </html>
